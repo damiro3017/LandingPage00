@@ -4,7 +4,7 @@
   --black: #000000;
   --dark-blue: #14213d;
   --yellow: #fca311;
-  --gray: #e5e5e5;
+  --gray: #f3eded;
   --white: #ffffff;
 
   --default-padding: 2rem 5rem;
@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -44,6 +45,9 @@ h3 {
   font-size: 2.074rem;
 }
 
+h4 {
+  font-size: 1.728rem;
+}
 /* Header section */
 .header {
   display: flex;
@@ -83,24 +87,27 @@ h3 {
   display: none;
 }
 
-.nav__list {
+.nav__list,
+.nav__list__footer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
 }
 
-.nav__links {
+.nav__links,
+.nav__links__footer {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--black);
   gap: 0.5rem;
   border-bottom: 2px solid transparent;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.2s;
 }
 
-.nav__links:hover {
+.nav__links:hover,
+.nav__links__footer:hover {
   border-bottom: 2px solid var(--yellow);
   color: var(--yellow);
 }
@@ -129,7 +136,7 @@ h3 {
   cursor: pointer;
   border-radius: 0.25rem;
   border: 1px solid transparent;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.2s;
 }
 
 .get__started__btn:hover {
@@ -193,6 +200,175 @@ h3 {
   max-width: 100%;
 }
 
+/* Testimonial section */
+.testimonial__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--default-padding);
+}
+
+.testimonial__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.cards__items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  background-color: #e5e5e569;
+  box-shadow: -13px 5px 30px -19px #14213d3f;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.cards__items:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+  transform: translateY(-5px);
+}
+
+.card__image i {
+  font-size: 1.5em;
+}
+
+.card__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* Messages section */
+.messages__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  padding: var(--default-padding);
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.messages__image {
+  display: flex;
+  align-items: center;
+}
+.messages__image img {
+  width: 100%;
+}
+
+.messages__content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--dark-blue);
+  gap: 1rem;
+}
+
+.messages__cards {
+  border-radius: 0.25rem;
+  background-color: var(--gray);
+  padding: 1.5rem;
+  width: 100%;
+  border-left: 5px solid transparent;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.messages__cards:nth-of-type(2),
+.messages__cards:nth-of-type(3) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.messages__cards:hover {
+  box-shadow: -5px 5px 10px -5px rgba(20, 33, 61, 0.2);
+  background-color: var(--white);
+  border-left: 3px solid var(--yellow);
+}
+
+/* Pricing section */
+.pricing__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--default-padding);
+  background-color: var(--dark-blue);
+}
+
+.pricing__title {
+  text-align: center;
+  color: var(--white);
+}
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  color: var(--dark-blue);
+  margin-top: 3rem;
+  gap: 2rem;
+  width: 100%;
+}
+
+.pricing_cards {
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  padding: 2rem;
+}
+
+.price {
+  color: var(--yellow);
+  font-weight: 500;
+}
+
+.pricing_cards hr {
+  margin-block: 2rem;
+  height: 2px;
+  background-color: var(--gray);
+  border: none;
+}
+
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits__items {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.benefits__items i {
+  color: var(--yellow);
+}
+
+.bi.bi-x-circle-fill.not__available {
+  color: var(--gray);
+}
+
+/* Footer section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--default-padding);
+  background-color: var(--gray);
+}
+
+.copyright {
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   :root {
@@ -200,7 +376,7 @@ h3 {
   }
 
   * {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .open__menu {
