@@ -437,4 +437,13 @@ h4 {
   .hero__image {
     display: none;
   }
+
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav__list__footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
