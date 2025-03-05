@@ -211,7 +211,7 @@ h4 {
 
 .testimonial__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 2rem;
 }
 
@@ -277,7 +277,7 @@ h4 {
   width: 100%;
   border-left: 5px solid transparent;
   cursor: pointer;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.2s;
 }
 
 .messages__cards:nth-of-type(2),
@@ -376,20 +376,12 @@ h4 {
   }
 
   * {
-    font-size: 15px;
-  }
-
-  .open__menu {
-    display: block;
-  }
-
-  .close__menu {
-    display: block;
+    font-size: 14px;
   }
 
   .navbar {
-    background-color: var(--yellow);
-    box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.3);
+    background-color: var(--dark-blue);
+    box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
     right: 0;
@@ -416,17 +408,23 @@ h4 {
   }
 
   .nav__links:hover {
-    border-bottom: 2px solid var(--black);
-    color: var(--dark-blue);
+    border-bottom: 2px solid var(--yellow);
+    color: var(--yellow);
+  }
+
+  .open__menu {
+    display: block;
   }
 
   .close__menu {
+    display: block;
     color: var(--white);
     cursor: pointer;
+    transition: all ease-in-out 0.2s;
   }
 
   .close__menu:hover {
-    color: var(--black);
+    color: var(--yellow);
   }
 
   .login__section {
@@ -442,6 +440,7 @@ h4 {
     flex-direction: column;
     gap: 1rem;
   }
+
   .nav__list__footer {
     flex-direction: column;
     gap: 0.5rem;
